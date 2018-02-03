@@ -32,3 +32,40 @@ app.post('/api/reserve', function (req, res) {
   var newReservation = req.body;
 
   tables.push(newReservation);
+
+	 //console.log(tables);
+
+  // Check if user is in the first 5 in list
+  var isBooked;
+  if(tables.length <= 5){
+    isBooked = true;
+  }
+  else{
+    isBooked = false;
+  }
+
+  res.json(isBooked);
+
+});
+
+
+app.post('/api/clear', function (req, res) {
+  console.log('clear all tables');
+  tables = [];
+  res.sendFile(path.join(__dirname, 'app/public/tables.html'));
+});
+
+app.post('/api/killreservation', function (req, res) {
+  console.log(req.body.id);
+
+  tables.splice(req.body.id, 1);
+  // console.log(tables);
+  res.json(tables);
+});
+
+
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function () {
+	console.log('App listening on PORT ' + PORT);
+});
