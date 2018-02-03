@@ -1,21 +1,26 @@
 {
-  "name": "hot-restaurant",
+
+  "name": "hotrestaurant",
   "version": "1.0.0",
-  "description": "An Express-backed application for receiving restaurant reservations.",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-
-  "author": "Hot Restaurant",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rochmirabeau/hotrestaurant.git"
+  },
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "morgan": "^1.8.2",
-    "ramda": "^0.24.1"
+  "bugs": {
+    "url": "https://github.com/rochmirabeau/hotrestaurant/issues"
   },
-  "devDependencies": {
-    "morgan": "^1.8.2"
+  "homepage": "https://github.com/rochmirabeau/hotrestaurant#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
   }
 }
