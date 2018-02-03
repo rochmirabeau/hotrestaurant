@@ -6,3 +6,16 @@
   "scripts": {
     "test": "test"
   },
+
+  "author": "Hot Restaurant",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "ramda": "^0.24.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.2"
+  }
+}
