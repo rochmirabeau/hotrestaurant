@@ -7,7 +7,7 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="https://code.jquery.com/jquery.js"></script>
 
@@ -17,43 +17,41 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1 class="text-center"><span class="oi oi-fire"></span> Hot Restaurant</h1>
+      <h1 class="text-center"><i class="fa fa-fire"></i> Hot Restaurant</h1>
       <hr>
       <h2 class="text-center">Current Reservations and Waiting List</h2>
       <br>
 
       <div class="text-center">
         <a href="/reserve"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
-        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+        <a href="/"><button type="button" class="btn btn-lg btn-default"><i class="fa fa-home"></i></button></a>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-12">
 
-        <!-- Current Tables in Use -->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">Current Reservations</h4>
+        <div class="card">
+          <h5 class="card-header">Current Reservations</h5>
+          <div class="card-body">
+            <input type="text" class="form-control" id="tableSection">
           </div>
-          <div class="panel-body" id="tableSection">
+        </div>
+        <br>
+        <div class="card">
+          <h5 class="card-header">Waiting List</h5>
+          <div class="card-body">
+            <input type="text" class="form-control" id="waitlistSection">
           </div>
         </div>
 
-        <!-- Waiting List Panel -->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">Waiting List</h4>
-          </div>
-          <div class="panel-body" id="waitlistSection">
-          </div>
-        </div>
-      </div>
+
     </div>
 
 
     <footer class="footer">
       <div class="container">
+        <br>
         <p>Control Panel</p>
         <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
       </div>
